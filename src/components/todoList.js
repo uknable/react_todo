@@ -3,13 +3,19 @@ import PropTypes from 'prop-types';
 
 class TodoList extends Component {
   createTaskRow(task, index) {
-    return (<h3 key={index}>{task}</h3>);
+    return (
+      <div key={index}>
+        <h3>{task}</h3>
+        <button value={index} onClick={this.props.onClick}>Remove</button>
+      </div>
+    );
   }
   render() {
     return (
-      <h3>
+      <div>
         {this.props.taskList.map((task, index) => this.createTaskRow(task, index))}
-      </h3>
+      </div>
+
     );
   }
 }

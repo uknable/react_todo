@@ -28,6 +28,10 @@ class TodoStore extends EventEmitter {
         _taskList.push(action.newTask);
         this.emitChange();
         break;
+      case ActionTypes.REMOVE_TASK:
+        _taskList.splice(action.taskIndex, 1);
+        this.emitChange();
+        break;
       default:
     }
   }
