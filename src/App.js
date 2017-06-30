@@ -3,12 +3,14 @@ import './App.css';
 import TodoHeader from './components/todoHeader.js';
 import TodoInput from './components/todoInput.js';
 import TodoList from './components/todoList.js';
+import TodoStore from './stores/todoStore.js';
+//import TodoActions from './actions/todoActions.js';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      taskList: ['hello', 'world']
+      taskList: TodoStore.getTaskList()
     }
   }
   render() {
