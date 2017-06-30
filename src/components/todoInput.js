@@ -1,14 +1,14 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-class TodoInput extends Component {
-  render() {
-    return (
-      <form>
-        <input type="text"/>
-        <button>Add</button>
-      </form>
-    );
-  }
+function TodoInput(props) {
+  return (
+    <form>
+      <input type="text"
+             value={props.taskInput}
+             onChange={props.onChange}/>
+      <button>Add</button>
+    </form>
+  );
 }
 
 export default TodoInput;
