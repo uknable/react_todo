@@ -4,18 +4,19 @@ import PropTypes from 'prop-types';
 class TodoList extends Component {
   createTaskRow(task, index) {
     return (
-      <div key={index}>
-        <h3>{task}</h3>
-        <button value={index} onClick={this.props.onClick}>Remove</button>
-      </div>
+      <li className="list-group-item" key={index}>
+        {task}
+        <button className="btn task-item-remove" value={index} onClick={this.props.onClick}>X</button>
+      </li>
     );
   }
   render() {
     return (
-      <div>
-        {this.props.taskList.map((task, index) => this.createTaskRow(task, index))}
+      <div className="todo-list-container">
+        <ul className="list-group">
+          {this.props.taskList.map((task, index) => this.createTaskRow(task, index))}
+        </ul>
       </div>
-
     );
   }
 }

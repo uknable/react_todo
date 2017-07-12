@@ -3,3 +3,19 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+#root {
+  text-align: center;
+}
+
+.task-item-remove {
+  background-color: red;
+  color: white;
+  float: right;
+  padding: 4px 10px;
+}
+
+.list-group-item {
+  font-size: 20px;
+  text-align: left;
+}
