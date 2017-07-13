@@ -19,3 +19,9 @@ body {
   font-size: 20px;
   text-align: left;
 }
+
+.todo-list-container {
+  margin: auto;
+  text-align: center;
+  width: 50%;
+}
